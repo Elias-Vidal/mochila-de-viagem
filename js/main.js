@@ -22,8 +22,11 @@ form.addEventListener("submit", (evento) => {
    
     novoItem.appendChild(numeroItem)
     novoItem.innerHTML += nome
-   
-    
+
     lista.appendChild(novoItem)
+
+    localStorage.setItem("nome",nome)
+    localStorage.setItem("quantidade",nome)
+
   }
   
