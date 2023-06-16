@@ -1,5 +1,6 @@
 const form = document.getElementById("novoItem")
 const lista = document.getElementById("lista")
+const itens = []
 
 form.addEventListener("submit", (evento) => {
     evento.preventDefault()
@@ -19,14 +20,18 @@ form.addEventListener("submit", (evento) => {
 
    const numeroItem= document.createElement('strong')
    numeroItem.innerHTML = quantidade
-   
     novoItem.appendChild(numeroItem)
+
     novoItem.innerHTML += nome
 
     lista.appendChild(novoItem)
-
-    localStorage.setItem("nome",nome)
-    localStorage.setItem("quantidade",nome)
+    const itemAtual = {
+      "nome": nome,
+      "quantidade":quantidade
+    }
+    itens.push(itemAtual)
+    localStorage.setItem("item", JSON.stringify(itens))
+    
 
   }
   
