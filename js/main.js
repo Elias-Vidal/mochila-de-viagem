@@ -15,8 +15,8 @@ form.addEventListener("submit", (evento) => {
     const quantidade =  evento.target.elements['quantidade']
 
     const itemAtual= {
-      nome.value = "".value,
-      quantidade.value= "".value
+      "nome": nome.value,
+      "quantidade":quantidade.value
  }
     localStorage.setItem("itens",JSON.stringify(itens))
  
