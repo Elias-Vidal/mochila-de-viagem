@@ -58,3 +58,4 @@ function criaElemento(item) {
 function atualizaElemento(item) {
   document.querySelector("[data-id='"+item.id+"']").innerHTML = item.quantidade
 }
+
