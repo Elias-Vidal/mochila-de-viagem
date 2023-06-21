@@ -24,8 +24,6 @@ form.addEventListener("submit", (evento) => {
     localStorage.setItem("itens",JSON.stringify(itens))
     nome.value = ""
     quantidade.value= ""
- 
-    
 
   })
 
